@@ -182,6 +182,7 @@ public class CustomerFormController {
     }
 
     public void btnSaveCustomer(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        //hibernate data Save Views
         CustomerRepository customerRepository=new CustomerRepository();
         Customer customer=getCustomerEntity();
         customerRepository.saveCustomer(customer);
@@ -189,6 +190,7 @@ public class CustomerFormController {
     }
 
     private Customer getCustomerEntity(){
+        //Data Add view
         Customer customer=new Customer();
         customer.setId(Long.parseLong(txtCustomerId.getText()));
         customer.setName(txtCustomerName.getText());
